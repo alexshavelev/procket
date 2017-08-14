@@ -333,7 +333,7 @@ exec(FD, [Cmd|Rest], _LastErrno) ->
         {Proc, {exit_status, Status}} ->
             {error, errno_id(Status)}
     end,
-
+        lager:info("Proc: ~p Cmd: ~p status: ~p~n", [Proc, Cmd, ExitValue]),
     case ExitValue of
         ok ->
             fdget(FD);
