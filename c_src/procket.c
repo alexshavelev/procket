@@ -1149,7 +1149,7 @@ static ErlNifFunc nif_funcs[] = {
     {"getsockopt_nif", 4, nif_getsockopt},
     {"listen", 2, nif_listen},
     {"read", 2, nif_read},
-    {"write_nif", 2, nif_write, ERL_NIF_DIRTY_JOB_IO_BOUND},
+    {"write_nif", 2, nif_write},
     {"writev_nif", 2, nif_writev},
 
     {"ioctl", 3, nif_ioctl},
